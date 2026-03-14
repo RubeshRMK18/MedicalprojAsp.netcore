@@ -21,6 +21,7 @@ namespace MedicalprojAsp.netcore.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+<<<<<<< HEAD
             modelBuilder.Entity("MedicalprojAsp.netcore.Model.Doctor", b =>
                 {
                     b.Property<int>("DoctorID")
@@ -32,11 +33,21 @@ namespace MedicalprojAsp.netcore.Migrations
                     b.Property<string>("DoctorName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+=======
+            modelBuilder.Entity("MedicalprojAsp.netcore.Models.Patient", b =>
+                {
+                    b.Property<int>("PatientId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PatientId"));
+>>>>>>> Patient
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+<<<<<<< HEAD
                     b.Property<string>("Specialization")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -79,6 +90,23 @@ namespace MedicalprojAsp.netcore.Migrations
                     b.HasKey("ScheduleId");
 
                     b.ToTable("DoctorSchedules");
+=======
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PatientId");
+
+                    b.ToTable("Patients");
+>>>>>>> Patient
                 });
 #pragma warning restore 612, 618
         }
