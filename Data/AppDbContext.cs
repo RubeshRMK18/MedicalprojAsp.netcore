@@ -14,5 +14,7 @@ namespace MedicalprojAsp.netcore.Data
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<DoctorSchedule> DoctorSchedules { get; set; }
         public DbSet<Patient> Patients { get; set; }
+
+        public DbSet<Appoinment>Appoinments { get; set; }
     }
 }
