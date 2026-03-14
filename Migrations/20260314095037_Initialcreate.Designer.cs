@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MedicalprojAsp.netcore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260314081706_Initialcreate")]
+    [Migration("20260314095037_Initialcreate")]
     partial class Initialcreate
     {
         /// <inheritdoc />
@@ -82,6 +82,35 @@ namespace MedicalprojAsp.netcore.Migrations
                     b.HasKey("ScheduleId");
 
                     b.ToTable("DoctorSchedules");
+                });
+
+            modelBuilder.Entity("MedicalprojAsp.netcore.Model.Patient", b =>
+                {
+                    b.Property<int>("PatientId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PatientId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PatientId");
+
+                    b.ToTable("Patients");
                 });
 #pragma warning restore 612, 618
         }

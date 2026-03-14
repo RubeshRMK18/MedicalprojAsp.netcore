@@ -1,5 +1,5 @@
 ﻿using MedicalprojAsp.netcore.Data;
-using MedicalprojAsp.netcore.Models;
+using MedicalprojAsp.netcore.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

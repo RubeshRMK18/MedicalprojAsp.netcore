@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MedicalprojAsp.netcore.Models
+namespace MedicalprojAsp.netcore.Model
 {
     public class Patient
     {
