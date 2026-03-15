@@ -25,7 +25,7 @@ namespace MedicalprojAsp.netcore.Controllers
         public IActionResult Putdoctors(int id)
         {
             var doctor = _appDbContext.Doctors.Find(id);
-            if (doctor != null)
+            if (doctor== null)
             {
                 return NotFound(" Doctor Appointment failed");
             }
